@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://bl.ocks.org/mbostock/raw/2368837/ -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<title>column</title>
+<style> </style>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/geom_icon.css">
+<style>
+.icon-box {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+</style>
+</head>
+<body>
+<div class="yin-yang icon-box"></div>
+<div class="square icon-box"></div>
+<div class="square1 icon-box"></div>
+<div class="circle icon-box"></div>
+<div class="triangle icon-box"></div>
+<div class="triangle2 icon-box"></div>
+<div class="triangle3 icon-box"></div>
+<div class="triangle4 icon-box"></div>
+<div class="star-five icon-box"></div>
+
+<script src="js/jquery-1.7.1.js"></script>
+<script src="js/geom_icon.js"></script>
+
+<script>
+new GeomIcon({
+  container: $('.yin-yang')[0],
+  type: 'yinYang',
+  size: 30,
+  color: {
+    backgroundColor: '#000',
+    foregroundColor: '#eee'
+  },
+  rotateDegree: 270
+}).render();
+
+new GeomIcon({
+  container: $('.square1')[0],
+  type: 'square',
+  size: 20,
+  color: 'green'
+}).render();
+
+new GeomIcon({
+  container: $('.square')[0],
+  type: 'square',
+  size: 15,
+  color: 'red',
+  rotateDegree: 45
+}).render();
+
+new GeomIcon({
+  container: $('.circle')[0],
+  type: 'circle',
+  size: 15,
+  color: 'blue'
+}).render();
+
+new GeomIcon({
+  container: $('.triangle')[0],
+  type: 'triangle',
+  size: 15,
+  color: 'orange'
+}).render();
+
+new GeomIcon({
+  container: $('.triangle2')[0],
+  type: 'triangle',
+  size: 20,
+  color: 'purple',
+  rotateDegree: 90
+}).render();
+
+new GeomIcon({
+  container: $('.triangle3')[0],
+  type: 'triangle',
+  size: 30,
+  color: 'yellow',
+  rotateDegree: 180
+}).render();
+
+new GeomIcon({
+  container: $('.triangle4')[0],
+  type: 'triangle',
+  size: 15,
+  color: 'pink',
+  rotateDegree: 270
+}).render();
+
+new GeomIcon({
+  container: $('.star-five')[0],
+  type: 'starFive',
+  size: 40,
+  color: 'golden',
+  rotateDegree: 15
+}).render();
+
+
+</script>
+</body></html>
+

@@ -1,0 +1,106 @@
+.geom-icon {
+  /*zoom: 1;*/
+  margin: auto;
+}
+.geom-icon .yin-yang {
+  width: 96px;
+  height: 48px;
+  background: #eee;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px 2px 50px 2px;
+  border-radius: 100%;
+  position: relative;
+}
+.geom-icon .yin-yang-before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #eee;
+  border: 18px solid #000;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+}
+.geom-icon .yin-yang-after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #000;
+  border: 18px solid #eee;
+  border-radius:100%;
+  width: 12px;
+  height: 12px;
+}
+.geom-icon .square {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+.geom-icon .circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.geom-icon .triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+}
+.geom-icon .star-five-box {
+  /*margin-top: 65px;*/
+}
+.geom-icon .star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: #FFD700;
+  width: 0px;
+  height: 0px;
+  border-right:  100px solid transparent;
+  border-bottom: 70px  solid #FFD700;
+  border-left:   100px solid transparent;
+  -moz-transform:    rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform:     rotate(35deg);
+  -o-transform:      rotate(35deg);
+}
+.geom-icon .star-five-before {
+  border-bottom: 80px solid #FFD700;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  -webkit-transform: rotate(-35deg);
+  -moz-transform:    rotate(-35deg);
+  -ms-transform:     rotate(-35deg);
+  -o-transform:      rotate(-35deg);
+}
+.geom-icon .star-five-after {
+  position: absolute;
+  display: block;
+  color: #FFD700;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #FFD700;
+  border-left: 100px solid transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform:    rotate(-70deg);
+  -ms-transform:     rotate(-70deg);
+  -o-transform:      rotate(-70deg);
+}
+
