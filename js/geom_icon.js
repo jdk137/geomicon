@@ -1,12 +1,11 @@
-//气泡图 绝对值 比例两种状态， 以及图例组件
+// 气泡图 绝对值 比例两种状态， 以及图例组件
 var GeomIcon = function (config) {
-  this.config = config;
+  this.config = config || {};
   //  4 params must need
-  var container = typeof config.container === 'string' ? document.getElementById(config.container) //id
-    : config.container; // dom node
+  var container = $(config.container);
   var type = config.type;
   var color = config.color;
-  var size = config.size || $(container).height();
+  var size = config.size || container.height();
 
   this.setOptions = function (config) {
     this.config = config;
@@ -17,8 +16,8 @@ var GeomIcon = function (config) {
   };
 
   var render = this.render = function () {
-    $(container).empty();
-    this.box = $('<div class="geom-icon"></div>').appendTo($(container));
+    container.empty();
+    this.box = $('<div class="geom-icon"></div>').appendTo(container);
     if (type === 'yinYang') {
       this.renderYinYang();
     }
@@ -75,8 +74,8 @@ var GeomIcon = function (config) {
     //center
     var zoom = size / defaultConfig.size;
     box.css({
-      'margin-top': Math.max(0, ($(container).height() - size) / 2 / zoom),
-      'margin-left': Math.max(0, ($(container).width() - size) / 2 / zoom),
+      'margin-top': Math.max(0, (container.height() - size) / 2 / zoom),
+      'margin-left': Math.max(0, (container.width() - size) / 2 / zoom),
       'zoom': zoom
     });
 
@@ -109,8 +108,8 @@ var GeomIcon = function (config) {
     //center
     var zoom = size / defaultConfig.size;
     box.css({
-      'margin-top': Math.max(0, ($(container).height() - size) / 2 / zoom),
-      'margin-left': Math.max(0, ($(container).width() - size) / 2 / zoom),
+      'margin-top': Math.max(0, (container.height() - size) / 2 / zoom),
+      'margin-left': Math.max(0, (container.width() - size) / 2 / zoom),
       'zoom': zoom
     });
 
@@ -143,8 +142,8 @@ var GeomIcon = function (config) {
     //center
     var zoom = size / defaultConfig.size;
     box.css({
-      'margin-top': Math.max(0, ($(container).height() - size) / 2 / zoom),
-      'margin-left': Math.max(0, ($(container).width() - size) / 2 / zoom),
+      'margin-top': Math.max(0, (container.height() - size) / 2 / zoom),
+      'margin-left': Math.max(0, (container.width() - size) / 2 / zoom),
       'zoom': zoom
     });
   };
@@ -167,8 +166,8 @@ var GeomIcon = function (config) {
     //center
     var zoom = size / defaultConfig.size;
     box.css({
-      'margin-top': Math.max(0, ($(container).height() - size) / 2 / zoom),
-      'margin-left': Math.max(0, ($(container).width() - size) / 2 / zoom),
+      'margin-top': Math.max(0, (container.height() - size) / 2 / zoom),
+      'margin-left': Math.max(0, (container.width() - size) / 2 / zoom),
       'zoom': zoom
     });
 
@@ -223,8 +222,8 @@ var GeomIcon = function (config) {
       height: defaultConfig.size
     });
     box.css({
-      'margin-top': Math.max(0, ($(container).height() - size) / 2 / zoom),
-      'margin-left': Math.max(0, ($(container).width() - size) / 2 / zoom),
+      'margin-top': Math.max(0, (container.height() - size) / 2 / zoom),
+      'margin-left': Math.max(0, (container.width() - size) / 2 / zoom),
       'zoom': zoom
     });
 
@@ -238,8 +237,4 @@ var GeomIcon = function (config) {
       'transform': 'rotate(' + degree + 'deg)'
     });
   };
-
-
-
-
 };
